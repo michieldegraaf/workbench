@@ -1,0 +1,220 @@
+/* 
+   Author:  Michiel de Graaf
+   Title:   Workbench, Shopping cart v.1.
+*/
+
+*{
+   margin:0;
+   padding:0;
+}
+body{
+   font:13px/18px Helvetica Neue,Helvetica,Arial,sans-serif;
+   text-align:baseline;
+   background:#d0e9fa;
+}
+   img{
+      border:0;
+   }
+   ::-moz-selection{
+      color:#333;
+      background:#fff;
+      text-shadow:0 1px rgba(0,0,0,0.2);
+   }
+   ::selection{
+      color:#333;
+      background:#fff;
+      text-shadow:0 1px rgba(0,0,0,0.2);
+   }
+   header,
+   nav,
+   section,
+   details,
+   summary,
+   article,
+   footer{
+      display:block;
+   }
+   a:hover{
+      text-decoration:none;
+   }
+
+/* Content */
+#content{
+   margin:0 auto;
+   width:280px;
+}
+   .shoppingCart{
+      position:relative;
+      margin-top:40px;
+      overflow:hidden;
+      text-shadow:0 1px rgba(0,0,0,0.3);
+      color:rgba(255,255,255,0.8);
+      border:3px solid #fff;
+      -webkit-border-radius:8px;
+      -moz-border-radius:8px;
+      border-radius:8px;
+      -webkit-box-shadow:0 2px 3px 1px rgba(0,0,0,0.2);
+      -moz-box-shadow:0 2px 3px 1px rgba(0,0,0,0.2);
+      box-shadow:0 2px 3px 1px rgba(0,0,0,0.2);
+      -webkit-transition:color 0.3s;
+      -moz-transition:color 0.3s;
+      transition:color 0.3s;
+   }
+      .shoppingCart:hover{
+         color:#fff;
+      }
+      .shoppingCart summary{
+         padding:10px 15px;
+         background:#222;
+         overflow:hidden;
+         background:-webkit-gradient(linear,left top,left bottom,color-stop(.1, #333),color-stop(1, #111));
+         background:-moz-linear-gradient(center top,#333 10%,#111 100%);
+         -webkit-border-radius:6px 6px 0 0;
+         -webkit-box-shadow:inset 0 1px 2px rgba(0,0,0,0.3);
+         -moz-box-shadow:inset 0 1px 2px rgba(0,0,0,0.3);
+         box-shadow:inset 0 1px 2px rgba(0,0,0,0.3);
+      }
+         .shoppingCart h4{
+            float:left;
+         }
+         .arrow{
+            float:right;
+            width:0;
+            height:0;
+            margin-top:7px;
+            border-top:4px solid rgba(255,255,255,0.4);
+            border-right:4px solid transparent;
+            border-left:4px solid transparent;
+            -webkit-transition:all 0.5s;
+            -moz-transition:all 0.5s;
+            transition:all 0.5s;
+         }
+            .shoppingCart:hover .arrow{
+               -webkit-transform:rotate(-180deg);
+               -moz-transform:rotate(-180deg);
+               transform:rotate(-180deg);
+            }
+      .shoppingCart ul{
+         list-style:none;
+         display:none;
+         position:relative;
+         color:#666;
+         color:rgba(0,0,0,0.6);
+         text-shadow:0 1px rgba(255,255,255,0.8);
+      }
+         .shoppingCart:hover ul{
+            display:block;
+         }
+         .shoppingCart li{
+            padding:10px 15px;
+            overflow:hidden;
+         }
+            .shoppingCart li:nth-child(even){
+               background:#f3eac9;
+               -webkit-box-shadow:inset 0 1px rgba(255,255,255,0.5);
+               -moz-box-shadow:inset 0 1px rgba(255,255,255,0.5);
+               box-shadow:inset 0 1px rgba(255,255,255,0.5);
+            }
+            .shoppingCart li:nth-child(odd){
+               background:#f8eab9;
+               -webkit-box-shadow:inset 0 1px rgba(0,0,0,0.1);
+               -moz-box-shadow:inset 0 1px rgba(0,0,0,0.1);
+               box-shadow:inset 0 1px rgba(0,0,0,0.1);
+            }
+            .shoppingCart li a{
+               color:#666;
+               color:rgba(0,0,0,0.7);
+               text-decoration:none;
+               border-bottom:1px dotted rgba(0,0,0,0.5);
+            }
+               .shoppingCart li a:hover{
+                  border:0;
+               }
+            .shoppingCart li span{
+               display:block;
+               float:left;
+            }
+            .shoppingCart li strong{
+               display:block;
+               float:right;
+            }
+      .shoppingCart p{
+         padding:10px 15px;
+         overflow:hidden;
+         background:#111;
+         background:-webkit-gradient(linear,left top,left bottom,color-stop(.2, #222),color-stop(1, #000));
+         background:-moz-linear-gradient(center top,#222 20%,#000 100%);
+         border-top:1px solid #313131;
+         -webkit-border-radius:0 0 6px 6px;
+      }
+         .shoppingCart p span{
+            display:block;
+         }
+            .shoppingCart p span:first-child{
+               float:left;
+            }
+               .shoppingCart:hover p span:first-child{
+                  display:none;
+               }
+            .shoppingCart p span:last-child{
+               float:right;
+            }
+      .checkout{
+         opacity:0;
+         display:block;
+         position:absolute;
+         color:#fff;
+         text-decoration:none;
+         font-weight:bold;
+         text-shadow:0 1px rgba(0,0,0,0.3);
+         bottom:6px;
+         left:6px;
+         padding:4px 10px 5px 10px;
+         background:-webkit-gradient(linear,left top,left bottom,color-stop(.2, #00cc73),color-stop(1, #008c4f));
+         background:-moz-linear-gradient(center top,#00cc73 20%,#008c4f 100%);
+         -webkit-border-radius:3px;
+         -moz-border-radius:3px;
+         border-radius:5px;
+         -webkit-box-shadow:inset 0 1px 0 #00e1a2, 0 1px 0 #000;
+         -moz-box-shadow:inset 0 1px 0 #00e1a2, 0 1px 0 #000;
+         box-shadow:inset 0 1px 0 #00e1a2, 0 1px 0 #000;
+         -webkit-transition:opacity 0.4s;
+         -moz-transition:opacity 0.4s;
+         transition:opacity 0.4s;
+      }
+         .checkout:hover{
+            background:-webkit-gradient(linear,left top,left bottom,color-stop(.05, #00e481),color-stop(1, #009543));
+            background:-moz-linear-gradient(center top,#00e481 5%,#009543 100%);
+         }
+         .checkout:active{
+            text-shadow:0 -1px rgba(0,0,0,0.3);
+            background:-webkit-gradient(linear,left top,left bottom, color-stop(.2, #008c4f),color-stop(1, #00cc73));
+            background:-moz-linear-gradient(center top,#008c4f 20%,#00cc73 100%);
+            -webkit-box-shadow:inset 0 1px 2px rgba(0,0,0,0.4);
+            -moz-box-shadow:inset 0 1px 2px rgba(0,0,0,0.4);
+            box-shadow:inset 0 1px 2px rgba(0,0,0,0.4);
+         }
+         .shoppingCart:hover .checkout{
+            opacity:1;
+         }
+         
+/* Footer */
+footer{
+   position:fixed;
+   width:100%;
+   bottom:4px;
+   text-align:center;
+}
+   footer a{
+      font-weight:bold;
+      text-decoration:none;
+      text-shadow:0 1px rgba(255,255,255,0.4);
+      color:#777;
+      color:rgba(0,0,0,0.4);
+      -webkit-transition:all 0.3s;
+      -moz-transition:all 0.3s;
+      transition:all 0.3s;
+   }
+      footer a:hover{
+         color:#e92c00;
+      }
