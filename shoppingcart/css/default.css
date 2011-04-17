@@ -41,6 +41,7 @@ body{
 /* Content */
 #content{
    margin:0 auto;
+   padding-bottom:50px;
    width:280px;
 }
    .shoppingCart{
@@ -51,14 +52,14 @@ body{
       color:rgba(255,255,255,0.8);
       border:3px solid #fff;
       -webkit-border-radius:8px;
-      -moz-border-radius:8px;
-      border-radius:8px;
+         -moz-border-radius:8px;
+              border-radius:8px;
       -webkit-box-shadow:0 2px 3px 1px rgba(0,0,0,0.2);
-      -moz-box-shadow:0 2px 3px 1px rgba(0,0,0,0.2);
-      box-shadow:0 2px 3px 1px rgba(0,0,0,0.2);
+         -moz-box-shadow:0 2px 3px 1px rgba(0,0,0,0.2);
+              box-shadow:0 2px 3px 1px rgba(0,0,0,0.2);
       -webkit-transition:color 0.3s;
-      -moz-transition:color 0.3s;
-      transition:color 0.3s;
+         -moz-transition:color 0.3s;
+              transition:color 0.3s;
    }
       .shoppingCart:hover{
          color:#fff;
@@ -71,8 +72,8 @@ body{
          background:-moz-linear-gradient(center top,#333 10%,#111 100%);
          -webkit-border-radius:6px 6px 0 0;
          -webkit-box-shadow:inset 0 1px 2px rgba(0,0,0,0.3);
-         -moz-box-shadow:inset 0 1px 2px rgba(0,0,0,0.3);
-         box-shadow:inset 0 1px 2px rgba(0,0,0,0.3);
+            -moz-box-shadow:inset 0 1px 2px rgba(0,0,0,0.3);
+                 box-shadow:inset 0 1px 2px rgba(0,0,0,0.3);
       }
          .shoppingCart h4{
             float:left;
@@ -86,13 +87,13 @@ body{
             border-right:4px solid transparent;
             border-left:4px solid transparent;
             -webkit-transition:all 0.5s;
-            -moz-transition:all 0.5s;
-            transition:all 0.5s;
+               -moz-transition:all 0.5s;
+                    transition:all 0.5s;
          }
             .shoppingCart:hover .arrow{
                -webkit-transform:rotate(-180deg);
-               -moz-transform:rotate(-180deg);
-               transform:rotate(-180deg);
+                  -moz-transform:rotate(-180deg);
+                       transform:rotate(-180deg);
             }
       .shoppingCart ul{
          list-style:none;
@@ -112,14 +113,14 @@ body{
             .shoppingCart li:nth-child(even){
                background:#f3eac9;
                -webkit-box-shadow:inset 0 1px rgba(255,255,255,0.5);
-               -moz-box-shadow:inset 0 1px rgba(255,255,255,0.5);
-               box-shadow:inset 0 1px rgba(255,255,255,0.5);
+                  -moz-box-shadow:inset 0 1px rgba(255,255,255,0.5);
+                       box-shadow:inset 0 1px rgba(255,255,255,0.5);
             }
             .shoppingCart li:nth-child(odd){
                background:#f8eab9;
                -webkit-box-shadow:inset 0 1px rgba(0,0,0,0.1);
-               -moz-box-shadow:inset 0 1px rgba(0,0,0,0.1);
-               box-shadow:inset 0 1px rgba(0,0,0,0.1);
+                  -moz-box-shadow:inset 0 1px rgba(0,0,0,0.1);
+                       box-shadow:inset 0 1px rgba(0,0,0,0.1);
             }
             .shoppingCart li a{
                color:#666;
@@ -173,14 +174,14 @@ body{
          background:-webkit-gradient(linear,left top,left bottom,color-stop(.2, #00cc73),color-stop(1, #008c4f));
          background:-moz-linear-gradient(center top,#00cc73 20%,#008c4f 100%);
          -webkit-border-radius:3px;
-         -moz-border-radius:3px;
-         border-radius:5px;
+            -moz-border-radius:3px;
+                 border-radius:5px;
          -webkit-box-shadow:inset 0 1px 0 #00e1a2, 0 1px 0 #000;
-         -moz-box-shadow:inset 0 1px 0 #00e1a2, 0 1px 0 #000;
-         box-shadow:inset 0 1px 0 #00e1a2, 0 1px 0 #000;
+            -moz-box-shadow:inset 0 1px 0 #00e1a2, 0 1px 0 #000;
+                 box-shadow:inset 0 1px 0 #00e1a2, 0 1px 0 #000;
          -webkit-transition:opacity 0.4s;
-         -moz-transition:opacity 0.4s;
-         transition:opacity 0.4s;
+            -moz-transition:opacity 0.4s;
+                 transition:opacity 0.4s;
       }
          .checkout:hover{
             background:-webkit-gradient(linear,left top,left bottom,color-stop(.05, #00e481),color-stop(1, #009543));
@@ -191,8 +192,8 @@ body{
             background:-webkit-gradient(linear,left top,left bottom, color-stop(.2, #008c4f),color-stop(1, #00cc73));
             background:-moz-linear-gradient(center top,#008c4f 20%,#00cc73 100%);
             -webkit-box-shadow:inset 0 1px 2px rgba(0,0,0,0.4);
-            -moz-box-shadow:inset 0 1px 2px rgba(0,0,0,0.4);
-            box-shadow:inset 0 1px 2px rgba(0,0,0,0.4);
+               -moz-box-shadow:inset 0 1px 2px rgba(0,0,0,0.4);
+                    box-shadow:inset 0 1px 2px rgba(0,0,0,0.4);
          }
          .shoppingCart:hover .checkout{
             opacity:1;
@@ -202,19 +203,82 @@ body{
 footer{
    position:fixed;
    width:100%;
-   bottom:4px;
-   text-align:center;
+   bottom:0;
+   overflow:hidden;
+   background:#fff;
+   background:rgba(255,255,255,0.75);
+   padding:5px 0;
+   -webkit-box-shadow:0 0 2px rgba(0,0,0,0.1);
+      -moz-box-shadow:0 0 2px rgba(0,0,0,0.1);
+           box-shadow:0 0 2px rgba(0,0,0,0.1);
 }
-   footer a{
-      font-weight:bold;
-      text-decoration:none;
-      text-shadow:0 1px rgba(255,255,255,0.4);
-      color:#777;
-      color:rgba(0,0,0,0.4);
-      -webkit-transition:all 0.3s;
-      -moz-transition:all 0.3s;
-      transition:all 0.3s;
+   footer ul{
+      display:block;
+      float:left;
+      list-style:none;
+      overflow:hidden;
+      margin-left:5px;
    }
-      footer a:hover{
-         color:#e92c00;
+      footer li{
+         display:block;
+         float:left;
       }
+         footer li a{
+            display:block;
+            font-weight:bold;
+            text-decoration:none;
+            color:#888;
+            text-shadow:0 1px #fff;
+            border:1px solid #d5d5d5;
+            border-bottom-color:#ddd;
+            background:#e8e8e8;
+            background:-webkit-gradient(linear,left top,left bottom,color-stop(.25, #eee),color-stop(1, #ddd));
+            background:-moz-linear-gradient(center top,#eee 25%,#ddd 100%);
+            -webkit-box-shadow:inset 0 1px 2px rgba(255,255,255,0.1);
+               -moz-box-shadow:inset 0 1px 2px rgba(255,255,255,0.1);
+                    box-shadow:inset 0 1px 2px rgba(255,255,255,0.1);
+         }
+            footer li:first-child a{
+               padding:4px 12px 6px 16px;
+               border-right:0;
+               -webkit-border-radius:18px 0 0 18px;
+                  -moz-border-radius:18px 0 0 18px;
+                       border-radius:18px 0 0 18px;
+            }
+            footer li:last-child a{
+               padding:4px 16px 6px 12px;
+               -webkit-border-radius:0 18px 18px 0;
+                  -moz-border-radius:0 18px 18px 0;
+                       border-radius:0 18px 18px 0;
+            }
+            footer li a:hover{
+               background:-webkit-gradient(linear,left top,left bottom,color-stop(.25, #fff),color-stop(1, #eee));
+               background:-moz-linear-gradient(center top,#fff 25%,#eee 100%);
+               -webkit-box-shadow:inset 0 1px 2px rgba(255,255,255,0.1);
+                  -moz-box-shadow:inset 0 1px 2px rgba(255,255,255,0.1);
+                       box-shadow:inset 0 1px 2px rgba(255,255,255,0.1);
+            }
+            footer li a:active{
+               text-shadow:0 -1px #fff;
+               background:-webkit-gradient(linear,left top,left bottom,color-stop(.25, #eee),color-stop(1, #fff));
+               background:-moz-linear-gradient(center top,#eee 25%,#fff 100%);
+               -webkit-box-shadow:inset 0 1px 2px rgba(0,0,0,0.1);
+                  -moz-box-shadow:inset 0 1px 2px rgba(0,0,0,0.1);
+                       box-shadow:inset 0 1px 2px rgba(0,0,0,0.1);
+            }
+   footer p{
+      float:right;
+      margin:5px 15px 0 0;
+   }
+      footer p a{
+         text-decoration:none;
+         text-shadow:0 1px rgba(255,255,255,0.4);
+         color:#777;
+         color:rgba(0,0,0,0.4);
+         -webkit-transition:all 0.3s;
+            -moz-transition:all 0.3s;
+                 transition:all 0.3s;
+      }
+         footer p a:hover{
+            color:#e92c00;
+         }
