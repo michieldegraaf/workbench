@@ -1,6 +1,6 @@
-/* 
+/*
    Author:  Michiel de Graaf
-   Title:   Workbench, Shopping cart v.1.
+   Title:   Workbench, Shopping cart
 */
 
 *{
@@ -59,6 +59,7 @@ body{
               box-shadow:0 2px 3px 1px rgba(0,0,0,0.2);
       -webkit-transition:color 0.3s;
          -moz-transition:color 0.3s;
+           -o-transition:color 0.3s;
               transition:color 0.3s;
    }
       .shoppingCart:hover{
@@ -69,8 +70,13 @@ body{
          background:#222;
          overflow:hidden;
          background:-webkit-gradient(linear,left top,left bottom,color-stop(.1, #333),color-stop(1, #111));
-         background:-moz-linear-gradient(center top,#333 10%,#111 100%);
-         -webkit-border-radius:6px 6px 0 0;
+         background: -webkit-linear-gradient(top,#333 10%,#111 100%);
+         background:    -moz-linear-gradient(top,#333 10%,#111 100%);
+         background:      -o-linear-gradient(top,#333 10%,#111 100%);
+         background:         linear-gradient(top,#333 10%,#111 100%);
+         -webkit-border-radius:5px 5px 0 0;
+            -moz-border-radius:5px 5px 0 0;
+                 border-radius:5px 5px 0 0;
          -webkit-box-shadow:inset 0 1px 2px rgba(0,0,0,0.3);
             -moz-box-shadow:inset 0 1px 2px rgba(0,0,0,0.3);
                  box-shadow:inset 0 1px 2px rgba(0,0,0,0.3);
@@ -88,28 +94,36 @@ body{
             border-left:4px solid transparent;
             -webkit-transition:all 0.5s;
                -moz-transition:all 0.5s;
+                 -o-transition:all 0.5s;
                     transition:all 0.5s;
          }
             .shoppingCart:hover .arrow{
                -webkit-transform:rotate(-180deg);
                   -moz-transform:rotate(-180deg);
+                    -o-transform:rotate(-180deg);
                        transform:rotate(-180deg);
             }
       .shoppingCart ul{
          list-style:none;
-         display:none;
          position:relative;
+         display:block;
          color:#666;
          color:rgba(0,0,0,0.6);
          text-shadow:0 1px rgba(255,255,255,0.8);
       }
-         .shoppingCart:hover ul{
-            display:block;
-         }
          .shoppingCart li{
-            padding:10px 15px;
+            padding:0 15px;
             overflow:hidden;
+            height:0px;
+            -webkit-transition:all 0.3s;
+               -moz-transition:all 0.3s;
+                 -o-transition:all 0.3s;
+                    transition:all 0.3s;
          }
+            .shoppingCart:hover ul li{
+               height:auto;
+               padding:10px 15px;
+            }
             .shoppingCart li:nth-child(even){
                background:#f3eac9;
                -webkit-box-shadow:inset 0 1px rgba(255,255,255,0.5);
@@ -144,9 +158,14 @@ body{
          overflow:hidden;
          background:#111;
          background:-webkit-gradient(linear,left top,left bottom,color-stop(.2, #222),color-stop(1, #000));
-         background:-moz-linear-gradient(center top,#222 20%,#000 100%);
+         background: -webkit-linear-gradient(top,#222 20%,#000 100%);
+         background:    -moz-linear-gradient(top,#222 20%,#000 100%);
+         background:      -o-linear-gradient(top,#222 20%,#000 100%);
+         background:         linear-gradient(top,#222 20%,#000 100%);
          border-top:1px solid #313131;
-         -webkit-border-radius:0 0 6px 6px;
+         -webkit-border-radius:0 0 5px 5px;
+            -moz-border-radius:0 0 5px 5px;
+                 border-radius:0 0 5px 5px;
       }
          .shoppingCart p span{
             display:block;
@@ -172,7 +191,10 @@ body{
          left:6px;
          padding:4px 10px 5px 10px;
          background:-webkit-gradient(linear,left top,left bottom,color-stop(.2, #00cc73),color-stop(1, #008c4f));
-         background:-moz-linear-gradient(center top,#00cc73 20%,#008c4f 100%);
+         background: -webkit-linear-gradient(top,#00cc73 20%,#008c4f 100%);
+         background:    -moz-linear-gradient(top,#00cc73 20%,#008c4f 100%);
+         background:      -o-linear-gradient(top,#00cc73 20%,#008c4f 100%);
+         background:         linear-gradient(top,#00cc73 20%,#008c4f 100%);
          -webkit-border-radius:3px;
             -moz-border-radius:3px;
                  border-radius:5px;
@@ -181,16 +203,23 @@ body{
                  box-shadow:inset 0 1px 0 #00e1a2, 0 1px 0 #000;
          -webkit-transition:opacity 0.4s;
             -moz-transition:opacity 0.4s;
+              -o-transition:opacity 0.4s;
                  transition:opacity 0.4s;
       }
          .checkout:hover{
             background:-webkit-gradient(linear,left top,left bottom,color-stop(.05, #00e481),color-stop(1, #009543));
-            background:-moz-linear-gradient(center top,#00e481 5%,#009543 100%);
+            background: -webkit-linear-gradient(top,#00e481 5%,#009543 100%);
+            background:    -moz-linear-gradient(top,#00e481 5%,#009543 100%);
+            background:      -o-linear-gradient(top,#00e481 5%,#009543 100%);
+            background:         linear-gradient(top,#00e481 5%,#009543 100%);
          }
          .checkout:active{
             text-shadow:0 -1px rgba(0,0,0,0.3);
             background:-webkit-gradient(linear,left top,left bottom, color-stop(.2, #008c4f),color-stop(1, #00cc73));
-            background:-moz-linear-gradient(center top,#008c4f 20%,#00cc73 100%);
+            background: -webkit-linear-gradient(top,#008c4f 20%,#00cc73 100%);
+            background:    -moz-linear-gradient(top,#008c4f 20%,#00cc73 100%);
+            background:      -o-linear-gradient(top,#008c4f 20%,#00cc73 100%);
+            background:         linear-gradient(top,#008c4f 20%,#00cc73 100%);
             -webkit-box-shadow:inset 0 1px 2px rgba(0,0,0,0.4);
                -moz-box-shadow:inset 0 1px 2px rgba(0,0,0,0.4);
                     box-shadow:inset 0 1px 2px rgba(0,0,0,0.4);
@@ -231,9 +260,11 @@ footer{
             text-shadow:0 1px #fff;
             border:1px solid #d5d5d5;
             border-bottom-color:#ddd;
-            background:#e8e8e8;
             background:-webkit-gradient(linear,left top,left bottom,color-stop(.25, #eee),color-stop(1, #ddd));
-            background:-moz-linear-gradient(center top,#eee 25%,#ddd 100%);
+            background: -webkit-linear-gradient(top,#eee 25%,#ddd 100%);
+            background:    -moz-linear-gradient(top,#eee 25%,#ddd 100%);
+            background:      -o-linear-gradient(top,#eee 25%,#ddd 100%);
+            background:         linear-gradient(top,#eee 25%,#ddd 100%);
             -webkit-box-shadow:inset 0 1px 2px rgba(255,255,255,0.1);
                -moz-box-shadow:inset 0 1px 2px rgba(255,255,255,0.1);
                     box-shadow:inset 0 1px 2px rgba(255,255,255,0.1);
@@ -253,15 +284,18 @@ footer{
             }
             footer li a:hover{
                background:-webkit-gradient(linear,left top,left bottom,color-stop(.25, #fff),color-stop(1, #eee));
-               background:-moz-linear-gradient(center top,#fff 25%,#eee 100%);
-               -webkit-box-shadow:inset 0 1px 2px rgba(255,255,255,0.1);
-                  -moz-box-shadow:inset 0 1px 2px rgba(255,255,255,0.1);
-                       box-shadow:inset 0 1px 2px rgba(255,255,255,0.1);
+               background: -webkit-linear-gradient(top,#fff 25%,#eee 100%);
+               background:    -moz-linear-gradient(top,#fff 25%,#eee 100%);
+               background:      -o-linear-gradient(top,#fff 25%,#eee 100%);
+               background:         linear-gradient(top,#fff 25%,#eee 100%);
             }
             footer li a:active{
                text-shadow:0 -1px #fff;
                background:-webkit-gradient(linear,left top,left bottom,color-stop(.25, #eee),color-stop(1, #fff));
-               background:-moz-linear-gradient(center top,#eee 25%,#fff 100%);
+               background: -webkit-linear-gradient(top,#eee 25%,#fff 100%);
+               background:    -moz-linear-gradient(top,#eee 25%,#fff 100%);
+               background:      -o-linear-gradient(top,#eee 25%,#fff 100%);
+               background:         linear-gradient(top,#eee 25%,#fff 100%);
                -webkit-box-shadow:inset 0 1px 2px rgba(0,0,0,0.1);
                   -moz-box-shadow:inset 0 1px 2px rgba(0,0,0,0.1);
                        box-shadow:inset 0 1px 2px rgba(0,0,0,0.1);
@@ -277,6 +311,7 @@ footer{
          color:rgba(0,0,0,0.4);
          -webkit-transition:all 0.3s;
             -moz-transition:all 0.3s;
+              -o-transition:all 0.3s;
                  transition:all 0.3s;
       }
          footer p a:hover{
