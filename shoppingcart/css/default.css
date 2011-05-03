@@ -10,19 +10,19 @@
 body{
    font:13px/18px Helvetica Neue,Helvetica,Arial,sans-serif;
    text-align:baseline;
-   background:#d0e9fa;
+   background:#f2efe5;
 }
    img{
       border:0;
    }
    ::-moz-selection{
-      color:#333;
-      background:#fff;
+      color:#fff;
+      background:#00a2ff;
       text-shadow:0 1px rgba(0,0,0,0.2);
    }
    ::selection{
-      color:#333;
-      background:#fff;
+      color:#fff;
+      background:#00a2ff;
       text-shadow:0 1px rgba(0,0,0,0.2);
    }
    header,
@@ -48,38 +48,39 @@ body{
       position:relative;
       margin-top:40px;
       overflow:hidden;
-      text-shadow:0 1px rgba(0,0,0,0.3);
-      color:rgba(255,255,255,0.8);
-      border:3px solid #fff;
-      -webkit-border-radius:8px;
-         -moz-border-radius:8px;
-              border-radius:8px;
+      text-shadow:0 1px 1px rgba(0,0,0,0.7);
+      color:#d4dae2;
+      border:3px solid rgba(255,255,255,0.3);
+      -webkit-border-radius:6px;
+         -moz-border-radius:6px;
+              border-radius:6px;
       -webkit-box-shadow:0 2px 3px 1px rgba(0,0,0,0.2);
          -moz-box-shadow:0 2px 3px 1px rgba(0,0,0,0.2);
               box-shadow:0 2px 3px 1px rgba(0,0,0,0.2);
-      -webkit-transition:color 0.3s;
-         -moz-transition:color 0.3s;
-           -o-transition:color 0.3s;
-              transition:color 0.3s;
+      -webkit-transition:color 0.3s, border 0.4s;
+         -moz-transition:color 0.3s, border 0.4s;
+           -o-transition:color 0.3s, border 0.4s;
+              transition:color 0.3s, border 0.4s;
    }
       .shoppingCart:hover{
          color:#fff;
+         border-color:rgba(255,255,255,0.7);
       }
       .shoppingCart summary{
          padding:10px 15px;
-         background:#222;
          overflow:hidden;
-         background:-webkit-gradient(linear,left top,left bottom,color-stop(.1, #333),color-stop(1, #111));
-         background: -webkit-linear-gradient(top,#333 10%,#111 100%);
-         background:    -moz-linear-gradient(top,#333 10%,#111 100%);
-         background:      -o-linear-gradient(top,#333 10%,#111 100%);
-         background:         linear-gradient(top,#333 10%,#111 100%);
-         -webkit-border-radius:5px 5px 0 0;
-            -moz-border-radius:5px 5px 0 0;
-                 border-radius:5px 5px 0 0;
-         -webkit-box-shadow:inset 0 1px 2px rgba(0,0,0,0.3);
-            -moz-box-shadow:inset 0 1px 2px rgba(0,0,0,0.3);
-                 box-shadow:inset 0 1px 2px rgba(0,0,0,0.3);
+         background:#222;
+         background:-webkit-gradient(linear,left top,left bottom,color-stop(.01, #133f58),color-stop(1, #122f40));
+         background: -webkit-linear-gradient(top,#133f58 1%,#122f40 100%);
+         background:    -moz-linear-gradient(top,#133f58 1%,#122f40 100%);
+         background:      -o-linear-gradient(top,#133f58 1%,#122f40 100%);
+         background:         linear-gradient(top,#133f58 1%,#122f40 100%);
+         -webkit-border-radius:3px 3px 0 0;
+            -moz-border-radius:3px 3px 0 0;
+                 border-radius:3px 3px 0 0;
+         -webkit-box-shadow:inset 0 1px 0 rgba(0,0,0,0.1);
+            -moz-box-shadow:inset 0 1px 0 rgba(0,0,0,0.1);
+                 box-shadow:inset 0 1px 0 rgba(0,0,0,0.1);
       }
          .shoppingCart h4{
             float:left;
@@ -89,8 +90,8 @@ body{
             width:0;
             height:0;
             margin-top:7px;
-            border-top:4px solid rgba(255,255,255,0.4);
             border-right:4px solid transparent;
+            border-bottom:4px solid #4d698c;
             border-left:4px solid transparent;
             -webkit-transition:all 0.5s;
                -moz-transition:all 0.5s;
@@ -107,8 +108,7 @@ body{
          list-style:none;
          position:relative;
          display:block;
-         color:#666;
-         color:rgba(0,0,0,0.6);
+         color:#385261;
          text-shadow:0 1px rgba(255,255,255,0.8);
       }
          .shoppingCart li{
@@ -125,22 +125,16 @@ body{
                padding:10px 15px;
             }
             .shoppingCart li:nth-child(even){
-               background:#f3eac9;
-               -webkit-box-shadow:inset 0 1px rgba(255,255,255,0.5);
-                  -moz-box-shadow:inset 0 1px rgba(255,255,255,0.5);
-                       box-shadow:inset 0 1px rgba(255,255,255,0.5);
+               background:#dbeffb;
             }
             .shoppingCart li:nth-child(odd){
-               background:#f8eab9;
-               -webkit-box-shadow:inset 0 1px rgba(0,0,0,0.1);
-                  -moz-box-shadow:inset 0 1px rgba(0,0,0,0.1);
-                       box-shadow:inset 0 1px rgba(0,0,0,0.1);
+               background:#eef6fb;
             }
             .shoppingCart li a{
-               color:#666;
-               color:rgba(0,0,0,0.7);
+               color:#385261;
                text-decoration:none;
-               border-bottom:1px dotted rgba(0,0,0,0.5);
+               border-color:#666;
+               border-bottom:1px dotted rgba(0,0,0,0.6);
             }
                .shoppingCart li a:hover{
                   border:0;
@@ -157,15 +151,15 @@ body{
          padding:10px 15px;
          overflow:hidden;
          background:#111;
-         background:-webkit-gradient(linear,left top,left bottom,color-stop(.2, #222),color-stop(1, #000));
-         background: -webkit-linear-gradient(top,#222 20%,#000 100%);
-         background:    -moz-linear-gradient(top,#222 20%,#000 100%);
-         background:      -o-linear-gradient(top,#222 20%,#000 100%);
-         background:         linear-gradient(top,#222 20%,#000 100%);
-         border-top:1px solid #313131;
-         -webkit-border-radius:0 0 5px 5px;
-            -moz-border-radius:0 0 5px 5px;
-                 border-radius:0 0 5px 5px;
+         background:-webkit-gradient(linear,left top,left bottom,color-stop(.01, #122f40),color-stop(1, #112135));
+         background: -webkit-linear-gradient(top,#122f40 1%,#112135 100%);
+         background:    -moz-linear-gradient(top,#122f40 1%,#112135 100%);
+         background:      -o-linear-gradient(top,#122f40 1%,#112135 100%);
+         background:         linear-gradient(top,#122f40 1%,#112135 100%);
+         border-top:1px solid rgba(0,0,0,0.1);
+         -webkit-border-radius:0 0 3px 3px;
+            -moz-border-radius:0 0 3px 3px;
+                 border-radius:0 0 3px 3px;
       }
          .shoppingCart p span{
             display:block;
@@ -189,24 +183,26 @@ body{
          text-shadow:0 1px rgba(0,0,0,0.3);
          bottom:6px;
          left:6px;
-         padding:4px 10px 5px 10px;
-         background:-webkit-gradient(linear,left top,left bottom,color-stop(.2, #00cc73),color-stop(1, #008c4f));
-         background: -webkit-linear-gradient(top,#00cc73 20%,#008c4f 100%);
-         background:    -moz-linear-gradient(top,#00cc73 20%,#008c4f 100%);
-         background:      -o-linear-gradient(top,#00cc73 20%,#008c4f 100%);
-         background:         linear-gradient(top,#00cc73 20%,#008c4f 100%);
-         -webkit-border-radius:3px;
-            -moz-border-radius:3px;
-                 border-radius:5px;
-         -webkit-box-shadow:inset 0 1px 0 #00e1a2, 0 1px 0 #000;
+         padding:4px 11px 6px 11px;
+         background:#009c58;
+         background:-webkit-gradient(linear,left top,left bottom,color-stop(.2, #00cc73),color-stop(1, #009c58));
+         background: -webkit-linear-gradient(top,#00cc73 20%,#009c58 100%);
+         background:    -moz-linear-gradient(top,#00cc73 20%,#009c58 100%);
+         background:      -o-linear-gradient(top,#00cc73 20%,#009c58 100%);
+         background:         linear-gradient(top,#00cc73 20%,#009c58 100%);
+         -webkit-border-radius:4px;
+            -moz-border-radius:4px;
+                 border-radius:4px;
+         -webkit-box-shadow:inset 0 1px 0 #00e1a2, 0 1px 0 rgba(0,0,0,0.1);
             -moz-box-shadow:inset 0 1px 0 #00e1a2, 0 1px 0 #000;
-                 box-shadow:inset 0 1px 0 #00e1a2, 0 1px 0 #000;
-         -webkit-transition:opacity 0.4s;
-            -moz-transition:opacity 0.4s;
-              -o-transition:opacity 0.4s;
-                 transition:opacity 0.4s;
+                 box-shadow:inset 0 1px 0 #00ffb8, 0 1px 0 rgba(0,0,0,0.1);
+         -webkit-transition:opacity 0.6s;
+            -moz-transition:opacity 0.6s;
+              -o-transition:opacity 0.6s;
+                 transition:opacity 0.6s;
       }
          .checkout:hover{
+            background:#00cc73;
             background:-webkit-gradient(linear,left top,left bottom,color-stop(.05, #00e481),color-stop(1, #009543));
             background: -webkit-linear-gradient(top,#00e481 5%,#009543 100%);
             background:    -moz-linear-gradient(top,#00e481 5%,#009543 100%);
@@ -215,11 +211,12 @@ body{
          }
          .checkout:active{
             text-shadow:0 -1px rgba(0,0,0,0.3);
-            background:-webkit-gradient(linear,left top,left bottom, color-stop(.2, #008c4f),color-stop(1, #00cc73));
-            background: -webkit-linear-gradient(top,#008c4f 20%,#00cc73 100%);
-            background:    -moz-linear-gradient(top,#008c4f 20%,#00cc73 100%);
-            background:      -o-linear-gradient(top,#008c4f 20%,#00cc73 100%);
-            background:         linear-gradient(top,#008c4f 20%,#00cc73 100%);
+            background:#009c58;
+            background:-webkit-gradient(linear,left top,left bottom, color-stop(.2, #009c58),color-stop(1, #00cc73));
+            background: -webkit-linear-gradient(top,#009c58 20%,#00cc73 100%);
+            background:    -moz-linear-gradient(top,#009c58 20%,#00cc73 100%);
+            background:      -o-linear-gradient(top,#009c58 20%,#00cc73 100%);
+            background:         linear-gradient(top,#009c58 20%,#00cc73 100%);
             -webkit-box-shadow:inset 0 1px 2px rgba(0,0,0,0.4);
                -moz-box-shadow:inset 0 1px 2px rgba(0,0,0,0.4);
                     box-shadow:inset 0 1px 2px rgba(0,0,0,0.4);
@@ -234,8 +231,7 @@ footer{
    width:100%;
    bottom:0;
    overflow:hidden;
-   background:#fff;
-   background:rgba(255,255,255,0.75);
+   background:rgba(255,255,255,0.9);
    padding:5px 0;
    -webkit-box-shadow:0 0 2px rgba(0,0,0,0.1);
       -moz-box-shadow:0 0 2px rgba(0,0,0,0.1);
@@ -260,6 +256,7 @@ footer{
             text-shadow:0 1px #fff;
             border:1px solid #d5d5d5;
             border-bottom-color:#ddd;
+            background:#ddd;
             background:-webkit-gradient(linear,left top,left bottom,color-stop(.25, #eee),color-stop(1, #ddd));
             background: -webkit-linear-gradient(top,#eee 25%,#ddd 100%);
             background:    -moz-linear-gradient(top,#eee 25%,#ddd 100%);
@@ -283,6 +280,7 @@ footer{
                        border-radius:0 18px 18px 0;
             }
             footer li a:hover{
+               background:#eee;
                background:-webkit-gradient(linear,left top,left bottom,color-stop(.25, #fff),color-stop(1, #eee));
                background: -webkit-linear-gradient(top,#fff 25%,#eee 100%);
                background:    -moz-linear-gradient(top,#fff 25%,#eee 100%);
@@ -291,6 +289,7 @@ footer{
             }
             footer li a:active{
                text-shadow:0 -1px #fff;
+               background:#ccc;
                background:-webkit-gradient(linear,left top,left bottom,color-stop(.25, #eee),color-stop(1, #fff));
                background: -webkit-linear-gradient(top,#eee 25%,#fff 100%);
                background:    -moz-linear-gradient(top,#eee 25%,#fff 100%);
